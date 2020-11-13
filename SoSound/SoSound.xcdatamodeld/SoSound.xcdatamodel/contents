@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Application" representedClassName="Application" syncable="YES">
+        <attribute name="adminPassword" optional="YES" attributeType="String"/>
+        <attribute name="enableAdminPassword" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="enableDemoMode" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="lastDownloadDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="runInBackground" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="showTour" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="version" optional="YES" attributeType="String"/>
+        <attribute name="wordpressPassword" optional="YES" attributeType="String"/>
+        <attribute name="wordpressUsername" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DefaultMusic" representedClassName="DefaultMusic" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageAssetName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="songFilename" optional="YES" attributeType="String"/>
+        <attribute name="sourceURL" optional="YES" attributeType="String"/>
+        <attribute name="tilePosition" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="MusicTile" representedClassName="MusicTile" syncable="YES">
+        <attribute name="defaultMusic" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="imageAssetName" optional="YES" attributeType="String"/>
+        <attribute name="localImageFile" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sample" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <relationship name="songs" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Song" inverseName="music" inverseEntity="Song"/>
+    </entity>
+    <entity name="Song" representedClassName="Song" syncable="YES">
+        <attribute name="default" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productSku" optional="YES" attributeType="String"/>
+        <attribute name="songFilename" optional="YES" attributeType="String"/>
+        <attribute name="sourceURL" optional="YES" attributeType="String"/>
+        <relationship name="music" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MusicTile" inverseName="songs" inverseEntity="MusicTile"/>
+    </entity>
+    <elements>
+        <element name="Application" positionX="-63" positionY="18" width="128" height="178"/>
+        <element name="DefaultMusic" positionX="189" positionY="81" width="128" height="133"/>
+        <element name="MusicTile" positionX="142" positionY="-30" width="128" height="148"/>
+        <element name="Song" positionX="351" positionY="-3" width="128" height="163"/>
+    </elements>
+</model>

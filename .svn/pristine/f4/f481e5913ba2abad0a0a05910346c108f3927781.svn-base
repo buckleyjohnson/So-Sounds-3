@@ -1,0 +1,47 @@
+//
+//  TimerViewController.swift
+//  SoSound
+//
+//  Created by David on 7/10/17.
+//  Copyright © 2017 Reverie. All rights reserved.
+//
+
+import UIKit
+
+class TimerViewController: UIViewController {
+    @IBOutlet weak var timeSelectorSegmentedControl: UISegmentedControl!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(TimerViewController.removeSelf), name: NSNotification.Name(rawValue: kTimer), object: nil)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //set the universal timer to the selected time
+        let time = (self.timeSelectorSegmentedControl.selectedSegmentIndex + 1) * 5
+        if !timerManager.timer.isValid{
+            timerManager.setTimer(time: time)
+        }
+//        print("Timer at: \(time)")
+    }
+    
+    func removeSelf() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

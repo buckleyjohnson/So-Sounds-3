@@ -1,0 +1,92 @@
+//
+//  TourPageViewController.swift
+//  SoSound
+//
+//  Created by Dave Brown on 9/7/18.
+//  Copyright © 2018 So Sound. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+
+class TourPageViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+
+    private var viewWidth: CGFloat = 500
+    private var viewHeight: CGFloat = 450
+    var pages = [UIViewController]()
+    var pageViewController: UIPageViewController;
+    var pageIndex : Int = 0;
+
+    required init?(coder aDecoder: NSCoder) {
+
+        pageViewController = UIPageViewController()
+        super.init(coder: aDecoder)
+    }
+
+    override func viewDidLoad() {
+
+        pageViewController = UIPageViewController.init(transitionStyle: UIPageViewControllerTransitionStyle.scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.horizontal)
+        pageViewController.delegate = self
+        pageViewController.dataSource = self
+
+        self.view.layer.cornerRadius = 15.0
+        pageViewController.view.layer.cornerRadius = 15.0
+        pageViewController.view.backgroundColor = UIColor.black
+
+        self.addChildViewController(pageViewController)
+        self.view.addSubview(pageViewController.view)
+        // Set page view controller's view's frame to match host view's frame
+        pageViewController.view.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight);
+        pageViewController.didMove(toParentViewController: self)
+
+        let storyboard: UIStoryboard = UIStoryboard(name: "Tour", bundle: nil)
+        let tourViewController = storyboard.instantiateViewController(withIdentifier: "TourViewController") as! TourIntroViewController
+        let tourDownloadViewController = storyboard.instantiateViewController(withIdentifier: "TourDownloadViewController") as! TourDownloadViewController
+        let tourCompleteViewController = storyboard.instantiateViewController(withIdentifier: "TourCompleteViewController") as! TourCompleteViewController
+
+        pages.append(tourViewController)
+        pages.append(tourDownloadViewController)
+        pages.append(tourCompleteViewController)
+        pageViewController.setViewControllers([tourViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
+
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        self.view.frame = CGRect(x: (UIScreen.main.bounds.width - viewWidth) / 2, y: (UIScreen.main.bounds.height - viewHeight) / 2, width: viewWidth, height: viewHeight)
+        self.pageViewController.view.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight)
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+
+        fatalError("We don't go backwards")
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        pageIndex += 1
+        return pages[pageIndex]
+    }
+
+}
+
+extension UIPageViewController {
+
+    func goToNextPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
+        if let currentViewController = viewControllers?[0] {
+            if let nextPage = dataSource?.pageViewController(self, viewControllerAfter: currentViewController) {
+                setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
+            }
+        }
+    }
+
+    func goToPreviousPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
+        if let currentViewController = viewControllers?[0] {
+            if let previousPage = dataSource?.pageViewController(self, viewControllerBefore: currentViewController){
+                setViewControllers([previousPage], direction: .reverse, animated: true, completion: completion)
+            }
+        }
+    }
+}
+

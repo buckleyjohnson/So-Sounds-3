@@ -1,0 +1,27 @@
+//
+//  TourIntroViewController.swift
+//  SoSound
+//
+//  Created by Dave Brown on 9/6/18.
+//  Copyright © 2018 So Sound. All rights reserved.
+//
+
+import UIKit
+
+class TourIntroViewController: TourViewController {
+
+    var downloadView: MusicDownloadView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        self.downloadView = MusicDownloadView(frame: CGRect.zero)
+    }
+
+    @IBAction func downloadMusicTapped(_ sender: Any) {
+
+        var pageViewController: UIPageViewController = self.parent as! UIPageViewController
+        pageViewController.goToNextPage()
+    }
+}

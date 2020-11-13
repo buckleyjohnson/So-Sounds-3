@@ -1,0 +1,296 @@
+//
+//  Constants.swift
+//  Reverie
+//
+//  Created by David on 9/29/15.
+//  Copyright © 2015 Reverie. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+//No UserProfile Constants
+let kDefaultEmailForNoUser = "defaultNoUser@nouser.com"
+
+//Internet status notification
+let kInternetAvailable = "InternetAvailable"
+
+// CoreData Constants
+let kCoreDataUserInfo = "UserInfoCD"
+let kCoreDataComfortSetting = "ComfortSettingCD"
+let kCoreDataRoutine = "RoutineCD"
+
+// UserInfo Profile Constants
+let kUserInfo = "UserInfo"
+let kUserFirstName = "FirstName"
+let kUserLastName = "LastName"
+let kUserGender = "Gender"
+let kUserBirthday = "Birthday"
+let kUserHeight = "Height"
+let kUserWeight = "Weight"
+let kUserLifeStyle = "LifeStyle"
+let kUserSleepingPosition = "SleepingPosition"
+let kUserTempurature = "Temperature"
+let kUserFoundation = "Foundation"
+let kUserMattress = "Mattress"
+let kUserFirmness = "Firmness"
+let kUserOccupants = "Occupants"
+let kUserHoursOfSleep = "HoursOfSleep"
+let kUserPhoneNumber = "PhoneNumber"
+let kUserEmail = "EmailAddress"
+let kUserPicture = "ProfilePicture"
+
+
+//WarrentyInfo Constants
+let kWarrentyInfo = "WarrentyInfo"
+let kWarrentyFirstName = "firstName"
+let kWarrentyLastName = "lastName"
+let kWarrentyEmail = "email"
+let kWarrentyPhoneNumber = "phoneNumber"
+let kWarrentyAddress = "address"
+let kWarrentyModel = "model"
+let kWarrentySerialNumber = "serialNumber"
+
+//Diagnostics Constants
+
+//Saved Comfort Setting Constants
+let kComfort = "ComfortSetting"
+let kComfortName = "Name"
+let kComfortHeadPosValue = "HeadPosValue"
+let kComfortFootPosValue = "FootPosValue"
+let kComfortLumbarPosValue = "LumbarPosValue"
+let kComfortHeadMassageValue = "HeadMassageValue"
+let kComfortFootMassageValue = "FootMassageValue"
+let kComfortMassageTimer = "MassageTimer"
+let kComfortMassageMode = "MassageMode"    //Stop, FullBody, Wave1, Wave2, Wave3, Wave4, Wave5
+let kComfortEmailAddress = "EmailAddress"
+let kComfortRoutineOnly = "RoutineOnly"
+
+//Saved Routine Constants
+let kRoutine = "Routine"
+let kRoutineName = "Name"
+let kRoutineComfortSettingIds = "ComfortSettings"
+let kRoutineTimes = "Times"
+let kRoutineEmailAddress = "EmailAddress"
+
+//Saved Alarm Constants
+let kAlarm = "Alarm"
+let kAlarmEmailAddress = "EmailAddress"
+let kAlarmTime = "Time"
+let kAlarmIsEnabled = "Enabled"
+let kAlarmDays = "Days"
+let kAlarmType = "Type"
+let kAlarmSnoozeEnabled = "Snooze"
+let kAlarmComfortSetting = "ComfortSetting"
+let kAlarmRoutine = "Routine"
+
+//Massage Modes
+enum MassageModes: String {
+    case Stop = "Stop"
+    case FullBody = "FullBody"
+    case Wave1 = "Wave1"
+    case Wave2 = "Wave2"
+    case Wave3 = "Wave3"
+    case Wave4 = "Wave4"
+    case Wave5 = "Wave5"
+    case None = "None"
+}
+
+//NSUser Defaults Bluetooth Constants
+let kBTLESavedBeds = "BTLESavedBeds"    //will contain a dictionary of saved UUID beds and alternate names. Default is UUID
+let kBTLEConnectBeds = "BTLEConnectBeds"    //beds to connect to
+
+//Types of Presets
+enum PresetType: String {
+    case ComfortSetting = "ComfortSetting"
+    case Routine = "Routine"
+    case None = "None"
+}
+
+//Days of the week for alarms
+enum DaysOfWeek: String {
+    case Sunday = "Sunday"
+    case Monday = "Monday"
+    case Tuesday = "Tuesday"
+    case Wednesday = "Wednesday"
+    case Thursday = "Thursday"
+    case Friday = "Friday"
+    case Saturday = "Saturday"
+    static let allValues = [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+}
+
+//Life Style Levels
+enum LifeStyle: String {
+    case SomeWhatActive = "Somewhat Active"
+    case Active = "Active"
+    case VeryActive = "Very Active"
+    case Athletic = "Athletic"
+    case NotActive = "Not Active"
+    static let allValues = [SomeWhatActive, Active, VeryActive, Athletic, NotActive]
+}
+
+//Temperature Levels
+enum Temperature: String {
+    case Cold = "Cold"
+    case Neutral = "Neutral"
+    case Hot = "Hot"
+    static let allValues = [Cold, Neutral, Hot]
+}
+
+//Sleeping Positions
+enum SleepPositions: String {
+    case Back = "Back"
+    case Side = "Side"
+    case Stomach = "Stomach"
+    case TossAndTurn = "Toss & Turn"
+    static let allValues = [Back, Side, Stomach, TossAndTurn]
+}
+
+//Foundation
+enum Foundation: String {
+    case Foundation3E = "3E"
+    case Foundation5D = "5D"
+    case Foundation7S = "7S"
+    case Foundation8Q = "8Q"
+    static let allValues = [Foundation3E, Foundation5D, Foundation7S, Foundation8Q]
+}
+
+//Mattress
+enum Mattress: String {
+    case DreamLite = "Dream Lite"
+    case Dream = "Dream"
+    case DreamSupreme = "Dream Supreme"
+    case Other = "Other"
+    static let allValues = [DreamLite, Dream, DreamSupreme, Other]
+}
+
+//Firmness
+enum Firmness: String {
+    case Soft = "Soft"
+    case Medium = "Medium"
+    case Firm = "Firm"
+    static let allValues = [Soft, Medium, Firm]
+}
+
+//Occupants
+enum Occupants: String {
+    case Single = "Single"
+    case Partner = "Partner"
+    case Pets = "Pet(s)"
+    static let allValues = [Single, Partner, Pets]
+}
+
+//Gender
+enum Gender: String {
+    case Male = "Male"
+    case Female = "Female"
+    static let allValues = [Male, Female]
+}
+
+
+//BTLE Module Types
+enum BTLEModule: String {
+    case BTLEOld108 = "BTLEOld108"
+    case BTLENew108 = "BTLENew108"
+    case BTLE110 = "BTLE110"
+    case All = "All"
+    static let allValues = [BTLEOld108, BTLENew108, BTLE110, All]
+}
+
+//Notification Center Constants
+let kCameraStart = "CameraStart"
+let kMoviePlayerStart = "MovieStart"
+let kTimer = "Timer"
+
+//Movement Times
+let kMaxHeadTime: Double = 26.0
+let kMaxFootTime: Double = 18.0
+let kMaxHeadTime110: Double = 20.0
+let kMaxFootTime110: Double = 20.0
+let kMaxLumbarTime110: Double = 20.0
+
+//PLC movement and massage constants
+let kMassageIncrement110PLC = 6
+
+//Device info
+let kDeviceModel = "DeviceModel"
+let kDeviceModeliPad = "iPad"
+let kDeviceModeliPhone = "iPhone"
+
+//Colors
+
+let kReverieBlue: UIColor = UIColor(red: 39 / 255, green: 142 / 255, blue: 205 / 255, alpha: 1.0)
+let kReverieDarkBlue: UIColor = UIColor(red: 30 / 255, green: 44 / 255, blue: 90 / 255, alpha: 1.0)
+let kReverieOrange: UIColor = UIColor(red: 242 / 255, green: 155 / 255, blue: 50 / 255, alpha: 1.0)
+let kReverieDarkGray: UIColor = UIColor(red: 78 / 255, green: 79 / 255, blue: 83 / 255, alpha: 1.0)
+let kReverieLightGray: UIColor = UIColor(red: 232 / 255, green: 236 / 255, blue: 238 / 255, alpha: 1.0)
+let kReverieRed: UIColor = UIColor(red: 190 / 255, green: 30 / 255, blue: 45 / 255, alpha: 1.0)
+let kClearColor: UIColor = UIColor.clear
+let kPurplePurple: UIColor = UIColor(red: 70 / 255, green: 22 / 255, blue: 107 / 255, alpha: 1.0)
+let kPurpleGreen: UIColor = UIColor(red: 0 / 255, green: 255 / 255, blue: 0 / 255, alpha: 1.0)
+
+// Bundle IDs
+let kBundleReverie = "com.reverie.Reverie"
+let kBundlePurple = "com.purple.Reverie"
+
+//Download and File Links
+let kDocumentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+//let kDownloadList = ["http://www.sosoundsolutions.com/uploads/ios-app-assets/Energizing.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Focused.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Jazz.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Journey.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Meditation.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Peaceful.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Present.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Relaxing.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Resonant.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Energizing_1hr.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Focused_1hr.wav", "http://www.sosoundsolutions.com/uploads/ios-app-assets/Present_1hr.wav"]
+
+//let kDownloadList = ["http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Energizing.mp3"]
+
+//let kSoSoundURL = Bundle.main.url(forResource: "SOChord", withExtension: "wav")
+//let kEnergizingURL = kDocumentsDirectoryURL.appendingPathComponent("Energizing.wav")
+//let kEnergizing1hrURL = kDocumentsDirectoryURL.appendingPathComponent("Energizing_1hr.wav")
+//let kFocusedURL = kDocumentsDirectoryURL.appendingPathComponent("Focused.wav")
+//let kFocused1hrURL = kDocumentsDirectoryURL.appendingPathComponent("Focused_1hr.wav")
+//let kJazzURL = kDocumentsDirectoryURL.appendingPathComponent("Jazz.wav")
+//let kJourneyURL = kDocumentsDirectoryURL.appendingPathComponent("Journey.wav")
+//let kPeacefulURL = kDocumentsDirectoryURL.appendingPathComponent("Peaceful.wav")
+//let kPresentURL = kDocumentsDirectoryURL.appendingPathComponent("Present.wav")
+//let kPresent1hrURL = kDocumentsDirectoryURL.appendingPathComponent("Present_1hr.wav")
+//let kRelaxingURL = kDocumentsDirectoryURL.appendingPathComponent("Relaxing.wav")
+//let kMeditationURL = kDocumentsDirectoryURL.appendingPathComponent("Meditation.wav")
+//let kResonantURL = kDocumentsDirectoryURL.appendingPathComponent("Resonant.wav")
+
+// For my development environment
+
+// for my testing
+//let musicDownloadList = ["http://staging.sosoundsolutions.com/uploads/IMG_0174.JPG"]
+
+let musicDownloadList = ["http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Energizing.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Focused.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Jazz.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Journey.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Meditation.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Peaceful.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Present.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Relaxing.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Resonant.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Energizing_1hr.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Focused_1hr.mp3", "http://www.sosoundsolutions.com/uploads/ios-app-assets/mp3/Present_1hr.mp3"]
+
+
+let songSoSoundURL = Bundle.main.url(forResource: "SOChord", withExtension: "wav")
+let songEnergizingURL = kDocumentsDirectoryURL.appendingPathComponent("Energizing.mp3")
+let songEnergizing1hrURL = kDocumentsDirectoryURL.appendingPathComponent("Energizing_1hr.mp3")
+let songFocusedURL = kDocumentsDirectoryURL.appendingPathComponent("Focused.mp3")
+let songFocused1hrURL = kDocumentsDirectoryURL.appendingPathComponent("Focused_1hr.mp3")
+let songJazzURL = kDocumentsDirectoryURL.appendingPathComponent("Jazz.mp3")
+let songJourneyURL = kDocumentsDirectoryURL.appendingPathComponent("Journey.mp3")
+let songPeacefulURL = kDocumentsDirectoryURL.appendingPathComponent("Peaceful.mp3")
+let songPresentURL = kDocumentsDirectoryURL.appendingPathComponent("Present.mp3")
+let songPresent1hrURL = kDocumentsDirectoryURL.appendingPathComponent("Present_1hr.mp3")
+let songRelaxingURL = kDocumentsDirectoryURL.appendingPathComponent("Relaxing.mp3")
+let songMeditationURL = kDocumentsDirectoryURL.appendingPathComponent("Meditation.mp3")
+let songResonantURL = kDocumentsDirectoryURL.appendingPathComponent("Resonant.mp3")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

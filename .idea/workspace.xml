@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c0122a3-7f62-4c7a-b070-efd7cc6bb7f9" name="Default" comment="Intial So sounds app import">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MusicTile+CoreDataClass.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/5-minute-demo.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/5-minute-demo.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Checked.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Checked.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Checked.imageset/checked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Checked.imageset/checked@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Checked.imageset/checked@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Down.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Down.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Down.imageset/move-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Down.imageset/move-down@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Up.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Up.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Up.imageset/move-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Move Up.imageset/move-up@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Play Button.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Play Button.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Play Button.imageset/play-button-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Play Button.imageset/play-button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Unchecked.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Unchecked.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Unchecked.imageset/unchecked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Unchecked.imageset/unchecked@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/Unchecked.imageset/unchecked@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/close.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/close.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/close.imageset/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/close.imageset/close@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/settings.imageset" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/settings.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/settings.imageset/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/settings.imageset/settings@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/SO-Chair-5min-Demo-Ref-8-27-1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/AdministrativePasswordController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/EditMusicDownloadViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/EditMusicViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/GettingDownloadableMusicController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/OrganizeMusicController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/ServerConfigController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/SettingsPopoverController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/tour/SettingsViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/controller/tour/TourSettingsViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/dao" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/dao/ApplicationDao.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/dao/DefaultMusicDao.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/dao/MusicTileDao.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/dao/SoSoundDao.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/dao/SongDao.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/model" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/model/DefaultMusic+CoreDataClass.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/model/DefaultMusic+CoreDataProperties.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/model/MusicTile+CoreDataProperties.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/model/Song+CoreDataClass.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/model/Song+CoreDataProperties.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/model/SongModel.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/service/NetworkManager.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/util/DatabaseManager.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/util/ImageUtil.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/util/UIUtil.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/GettingDownloadableMusicView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/MusicDownloadHeaderView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/MusicHeaderView.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/MusicTileView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/MusicTilesView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/cell" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/cell/MusicDownloadRowTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/cell/MusicRowTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoSound/view/cell/OrganizeMusicRowTableCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound.xcodeproj/project.xcworkspace/xcuserdata/davebrown.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound.xcodeproj/project.xcworkspace/xcuserdata/davebrown.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound.xcodeproj/xcuserdata/davebrown.xcuserdatad/xcschemes/SoSound.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound.xcodeproj/xcuserdata/davebrown.xcuserdatad/xcschemes/SoSound.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound.xcodeproj/xcuserdata/davebrown.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound.xcodeproj/xcuserdata/davebrown.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/Assets.xcassets/5-minute-demo.imageset/5-minute-demo.png" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/Assets.xcassets/5-minute-demo.imageset/5-minute-demo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/Constants.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/Constants.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/SoSound.xcdatamodeld/SoSound.xcdatamodel/contents" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/SoSound.xcdatamodeld/SoSound.xcdatamodel/contents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/AdminViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/AdminViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/ExperienceViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/ExperienceViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/HomeViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/HomeViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/LogoViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/LogoViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/TimerViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/TimerViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/tour/TourCompleteViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/tour/TourCompleteViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/tour/TourDownloadViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/tour/TourDownloadViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/tour/TourIntroViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/tour/TourIntroViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/tour/TourPageViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/tour/TourPageViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/tour/TourViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/tour/TourViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/controller/tour/resources/Tour.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/controller/tour/resources/Tour.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/service/MusicDownloadDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/service/MusicDownloadDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/service/MusicManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/service/MusicManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/service/SoundManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/service/SoundManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/service/TimerManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/service/TimerManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/util/SwiftSMTP/cert.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/util/SwiftSMTP/cert.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoSound/view/MusicDownloadView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SoSound/view/MusicDownloadView.swift" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_465B2292-A3FD-45C2-9E3C-A6ADB464B4A5" />
+  <component name="FavoritesManager">
+    <favorites_list name="SoSound" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/CocoaLumberjack" />
+  </component>
+  <component name="ProjectId" id="1Of9l4mYoMgwTDKnRuXwSPgDuWJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="SoSound" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SoSound/Samples" />
+      <recent name="$PROJECT_DIR$/SoSound/controller" />
+      <recent name="$PROJECT_DIR$/SoSound/service" />
+      <recent name="$PROJECT_DIR$/SoSound/view" />
+      <recent name="$PROJECT_DIR$/SoSound/dao" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SoSound" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SoSound" TARGET_NAME="SoSound" CONFIG_NAME="Debug" SCHEME_NAME="SoSound" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="SoSound" RUN_TARGET_NAME="SoSound" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c0122a3-7f62-4c7a-b070-efd7cc6bb7f9" name="Default" comment="" />
+      <created>1526920310530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526920310530</updated>
+      <workItem from="1526920311934" duration="3819000" />
+      <workItem from="1526939367024" duration="12997000" />
+      <workItem from="1527173846959" duration="298000" />
+      <workItem from="1527697687624" duration="27000" />
+      <workItem from="1527778498266" duration="201000" />
+      <workItem from="1527785734665" duration="3000" />
+      <workItem from="1527956767462" duration="39000" />
+      <workItem from="1528201802635" duration="4013000" />
+      <workItem from="1528293853229" duration="393000" />
+      <workItem from="1528294322580" duration="314000" />
+      <workItem from="1528328408593" duration="598000" />
+      <workItem from="1528414912049" duration="16000" />
+      <workItem from="1528480876419" duration="2490000" />
+      <workItem from="1528493069421" duration="13000" />
+      <workItem from="1528495736335" duration="14000" />
+      <workItem from="1528735917999" duration="826000" />
+      <workItem from="1534179734993" duration="11849000" />
+      <workItem from="1534535462906" duration="99000" />
+      <workItem from="1534535601868" duration="116000" />
+      <workItem from="1534535969719" duration="1397000" />
+      <workItem from="1534717339296" duration="661000" />
+      <workItem from="1534718177203" duration="7074000" />
+      <workItem from="1534888043693" duration="10948000" />
+      <workItem from="1535493106748" duration="1160000" />
+      <workItem from="1536077541380" duration="4029000" />
+      <workItem from="1536087350813" duration="51000" />
+      <workItem from="1536087502830" duration="3890000" />
+      <workItem from="1536182021180" duration="83000" />
+      <workItem from="1536182151934" duration="2487000" />
+      <workItem from="1536184970877" duration="1281000" />
+      <workItem from="1536186528313" duration="416000" />
+      <workItem from="1536186971604" duration="9667000" />
+      <workItem from="1536272006314" duration="1500000" />
+      <workItem from="1536273603984" duration="597000" />
+      <workItem from="1536274411917" duration="3649000" />
+      <workItem from="1536345900724" duration="18232000" />
+      <workItem from="1536373079360" duration="3679000" />
+      <workItem from="1536434069544" duration="4885000" />
+      <workItem from="1536548538890" duration="222000" />
+      <workItem from="1536598844503" duration="5342000" />
+      <workItem from="1536698060137" duration="10558000" />
+      <workItem from="1536790308841" duration="785000" />
+      <workItem from="1536791281944" duration="1112000" />
+      <workItem from="1537131815924" duration="6595000" />
+      <workItem from="1537138681691" duration="2286000" />
+      <workItem from="1537457305808" duration="1776000" />
+      <workItem from="1537460242578" duration="1800000" />
+      <workItem from="1537642212323" duration="319000" />
+      <workItem from="1537648133933" duration="63000" />
+      <workItem from="1537648536514" duration="26976000" />
+      <workItem from="1537826057340" duration="24507000" />
+      <workItem from="1537974314885" duration="15896000" />
+      <workItem from="1538418931887" duration="360000" />
+      <workItem from="1538419774672" duration="4312000" />
+      <workItem from="1538764005453" duration="6000" />
+      <workItem from="1538953652843" duration="6722000" />
+      <workItem from="1539179290303" duration="2358000" />
+      <workItem from="1539188537961" duration="685000" />
+      <workItem from="1539192419023" duration="15129000" />
+      <workItem from="1539300041977" duration="383000" />
+      <workItem from="1539302906782" duration="562000" />
+      <workItem from="1539619474661" duration="711000" />
+      <workItem from="1539620720009" duration="5000" />
+      <workItem from="1539620797815" duration="408000" />
+      <workItem from="1539621264378" duration="14992000" />
+      <workItem from="1539728309955" duration="121000" />
+      <workItem from="1539731311665" duration="4147000" />
+      <workItem from="1539885422263" duration="57000" />
+      <workItem from="1539885513624" duration="5368000" />
+      <workItem from="1540134197688" duration="10000" />
+      <workItem from="1540134236051" duration="413000" />
+      <workItem from="1540219034687" duration="4824000" />
+      <workItem from="1540388626189" duration="13731000" />
+      <workItem from="1540829477293" duration="44000" />
+      <workItem from="1540829555675" duration="4482000" />
+      <workItem from="1540835279272" duration="4450000" />
+      <workItem from="1540841162127" duration="200000" />
+      <workItem from="1540920766779" duration="35000" />
+      <workItem from="1540920834097" duration="46000" />
+      <workItem from="1540920903393" duration="3280000" />
+      <workItem from="1541013181421" duration="3675000" />
+      <workItem from="1541267180880" duration="16782000" />
+      <workItem from="1541286847281" duration="3808000" />
+      <workItem from="1541291029998" duration="3920000" />
+      <workItem from="1541297728530" duration="1054000" />
+      <workItem from="1541347430762" duration="7536000" />
+      <workItem from="1541357940723" duration="15413000" />
+      <workItem from="1541374196814" duration="171000" />
+      <workItem from="1541612941221" duration="3647000" />
+      <workItem from="1541616854880" duration="2145000" />
+      <workItem from="1541691011037" duration="3091000" />
+      <workItem from="1541695270232" duration="7615000" />
+      <workItem from="1541703001167" duration="4706000" />
+      <workItem from="1541779835682" duration="1300000" />
+      <workItem from="1541885453555" duration="8578000" />
+      <workItem from="1542047018000" duration="475000" />
+      <workItem from="1542048587691" duration="153000" />
+      <workItem from="1542049176134" duration="7316000" />
+      <workItem from="1542077159698" duration="1516000" />
+      <workItem from="1542081268858" duration="3000" />
+      <workItem from="1542230115771" duration="9041000" />
+      <workItem from="1542254476755" duration="4468000" />
+      <workItem from="1542302006424" duration="2576000" />
+      <workItem from="1542304647049" duration="5254000" />
+      <workItem from="1542318684758" duration="406000" />
+      <workItem from="1542577254112" duration="228000" />
+      <workItem from="1542577611741" duration="2824000" />
+      <workItem from="1542655833602" duration="3378000" />
+      <workItem from="1542828547925" duration="4475000" />
+      <workItem from="1542944440999" duration="18000" />
+      <workItem from="1542944484666" duration="412000" />
+      <workItem from="1543169815656" duration="13000" />
+      <workItem from="1543169874949" duration="10000" />
+      <workItem from="1543169907817" duration="20000" />
+      <workItem from="1543169947510" duration="7272000" />
+      <workItem from="1543250100002" duration="7236000" />
+      <workItem from="1543371524411" duration="448000" />
+      <workItem from="1543424161576" duration="9798000" />
+      <workItem from="1543445081812" duration="673000" />
+      <workItem from="1543445996091" duration="1571000" />
+      <workItem from="1543537218918" duration="922000" />
+      <workItem from="1543539947298" duration="26000" />
+      <workItem from="1543547339306" duration="597000" />
+      <workItem from="1543608008494" duration="587000" />
+      <workItem from="1543611624066" duration="73000" />
+      <workItem from="1543968446894" duration="956000" />
+      <workItem from="1545070493549" duration="2000" />
+      <workItem from="1545080599174" duration="1167000" />
+      <workItem from="1546101725672" duration="7024000" />
+      <workItem from="1546181433917" duration="13287000" />
+      <workItem from="1546285152091" duration="424000" />
+      <workItem from="1546815265401" duration="2835000" />
+      <workItem from="1546818158606" duration="664000" />
+      <workItem from="1546891501513" duration="3404000" />
+      <workItem from="1547048776227" duration="7268000" />
+      <workItem from="1547058326612" duration="3137000" />
+      <workItem from="1547062078350" duration="22370000" />
+      <workItem from="1547342645091" duration="759000" />
+      <workItem from="1547343831281" duration="610000" />
+      <workItem from="1547482328061" duration="5565000" />
+      <workItem from="1547491456920" duration="3182000" />
+      <workItem from="1547929591698" duration="175000" />
+      <workItem from="1547930134181" duration="448000" />
+      <workItem from="1548200099028" duration="3866000" />
+      <workItem from="1548268659731" duration="1497000" />
+      <workItem from="1548776304698" duration="554000" />
+      <workItem from="1548776863312" duration="732000" />
+      <workItem from="1548777730229" duration="6947000" />
+      <workItem from="1548801936388" duration="3972000" />
+      <workItem from="1549036710378" duration="698000" />
+      <workItem from="1549037963478" duration="7341000" />
+      <workItem from="1549367253043" duration="2000" />
+      <workItem from="1549562022593" duration="1889000" />
+      <workItem from="1549683592671" duration="223000" />
+      <workItem from="1549907684247" duration="1359000" />
+      <workItem from="1549914303542" duration="2474000" />
+      <workItem from="1549922632805" duration="7933000" />
+      <workItem from="1550092633339" duration="7117000" />
+      <workItem from="1550176396224" duration="2281000" />
+      <workItem from="1550359350735" duration="3838000" />
+      <workItem from="1550366455289" duration="580000" />
+      <workItem from="1550461638413" duration="99000" />
+      <workItem from="1550504540890" duration="815000" />
+      <workItem from="1550762476775" duration="185000" />
+      <workItem from="1550765602570" duration="28000" />
+      <workItem from="1550765721259" duration="126000" />
+      <workItem from="1550766577402" duration="4000000" />
+      <workItem from="1551205000193" duration="386000" />
+      <workItem from="1551205852779" duration="144000" />
+      <workItem from="1551215242680" duration="1307000" />
+      <workItem from="1551236827546" duration="80000" />
+      <workItem from="1551236957547" duration="27000" />
+      <workItem from="1551238373829" duration="1513000" />
+      <workItem from="1551297126776" duration="1532000" />
+      <workItem from="1551722358305" duration="959000" />
+      <workItem from="1551724349884" duration="613000" />
+      <workItem from="1551729886075" duration="6000" />
+      <workItem from="1551800495400" duration="888000" />
+      <workItem from="1551916826677" duration="115000" />
+      <workItem from="1551918589916" duration="1830000" />
+      <workItem from="1551967877135" duration="211000" />
+      <workItem from="1552091462547" duration="438000" />
+      <workItem from="1552093788501" duration="608000" />
+      <workItem from="1552318068399" duration="535000" />
+      <workItem from="1552319143568" duration="534000" />
+      <workItem from="1552577912175" duration="1422000" />
+      <workItem from="1552922669832" duration="365000" />
+      <workItem from="1553053296987" duration="612000" />
+      <workItem from="1553393075891" duration="1000" />
+      <workItem from="1554144568752" duration="1176000" />
+      <workItem from="1555342927205" duration="401000" />
+      <workItem from="1555343396625" duration="158000" />
+      <workItem from="1555348815506" duration="629000" />
+      <workItem from="1555430839463" duration="482000" />
+      <workItem from="1555432340454" duration="341000" />
+      <workItem from="1555432704218" duration="1145000" />
+      <workItem from="1556204069435" duration="424000" />
+      <workItem from="1556205589093" duration="187000" />
+      <workItem from="1556231009060" duration="487000" />
+      <workItem from="1556287126911" duration="540000" />
+      <workItem from="1556301539794" duration="514000" />
+      <workItem from="1556548465964" duration="1948000" />
+      <workItem from="1556656171861" duration="497000" />
+      <workItem from="1556818218927" duration="14000" />
+      <workItem from="1556835448077" duration="188000" />
+      <workItem from="1556893384781" duration="582000" />
+      <workItem from="1561330947616" duration="21000" />
+      <workItem from="1562095547978" duration="5000" />
+      <workItem from="1562343503487" duration="2151000" />
+      <workItem from="1562385445826" duration="459000" />
+      <workItem from="1562386244735" duration="2242000" />
+      <workItem from="1562615159480" duration="1887000" />
+      <workItem from="1562640370468" duration="467000" />
+      <workItem from="1562640957208" duration="390000" />
+      <workItem from="1562684367833" duration="1432000" />
+      <workItem from="1562688304535" duration="661000" />
+      <workItem from="1562993445675" duration="167000" />
+      <workItem from="1562993995291" duration="1595000" />
+      <workItem from="1563031613803" duration="1282000" />
+      <workItem from="1563083160648" duration="169000" />
+      <workItem from="1563160415586" duration="78000" />
+      <workItem from="1563222099110" duration="9000" />
+      <workItem from="1563312245431" duration="432000" />
+      <workItem from="1563418651624" duration="777000" />
+      <workItem from="1564357933299" duration="1049000" />
+      <workItem from="1564373941928" duration="4000" />
+      <workItem from="1565804193197" duration="5987000" />
+      <workItem from="1565814221144" duration="528000" />
+      <workItem from="1565835366657" duration="70000" />
+      <workItem from="1565835442631" duration="125000" />
+      <workItem from="1565835604402" duration="231000" />
+      <workItem from="1565978533121" duration="600000" />
+      <workItem from="1566145757656" duration="841000" />
+      <workItem from="1566158322085" duration="685000" />
+      <workItem from="1566495628419" duration="2384000" />
+      <workItem from="1566683309244" duration="1884000" />
+      <workItem from="1566759270074" duration="6910000" />
+      <workItem from="1566834200050" duration="5469000" />
+      <workItem from="1566927434053" duration="2208000" />
+      <workItem from="1566931442843" duration="1119000" />
+      <workItem from="1566932788438" duration="26000" />
+      <workItem from="1566933240376" duration="3592000" />
+      <workItem from="1567619707899" duration="34000" />
+      <workItem from="1567619749389" duration="7449000" />
+      <workItem from="1567694971291" duration="480000" />
+      <workItem from="1567803551097" duration="7787000" />
+      <workItem from="1567827427768" duration="2189000" />
+      <workItem from="1567880201550" duration="762000" />
+      <workItem from="1568075895019" duration="4849000" />
+      <workItem from="1568147382979" duration="5101000" />
+      <workItem from="1568165952406" duration="3713000" />
+      <workItem from="1568219533395" duration="9353000" />
+      <workItem from="1568386884320" duration="14966000" />
+      <workItem from="1568426713681" duration="3481000" />
+      <workItem from="1568598404390" duration="54000" />
+      <workItem from="1568673271761" duration="3398000" />
+      <workItem from="1568739980671" duration="4540000" />
+      <workItem from="1568910970760" duration="3139000" />
+      <workItem from="1569251946400" duration="1511000" />
+      <workItem from="1569874633350" duration="177000" />
+      <workItem from="1569875058689" duration="752000" />
+      <workItem from="1570056883622" duration="24000" />
+      <workItem from="1570057902187" duration="97000" />
+      <workItem from="1570058015957" duration="693000" />
+      <workItem from="1570070887848" duration="6820000" />
+      <workItem from="1570133528578" duration="987000" />
+      <workItem from="1570153758526" duration="7577000" />
+      <workItem from="1570213155488" duration="913000" />
+      <workItem from="1570246712515" duration="11236000" />
+      <workItem from="1570464283255" duration="8983000" />
+      <workItem from="1570642046106" duration="1082000" />
+      <workItem from="1571094794470" duration="11556000" />
+      <workItem from="1571348682949" duration="11240000" />
+      <workItem from="1571360930317" duration="2431000" />
+      <workItem from="1571364818963" duration="17290000" />
+      <workItem from="1572015643153" duration="21122000" />
+      <workItem from="1572117905955" duration="6377000" />
+      <workItem from="1572213953250" duration="5654000" />
+      <workItem from="1572293328816" duration="2910000" />
+      <workItem from="1572637944158" duration="870000" />
+      <workItem from="1572707061848" duration="2000" />
+      <workItem from="1572883503568" duration="17795000" />
+      <workItem from="1573061354772" duration="14840000" />
+      <workItem from="1573183257358" duration="3000" />
+      <workItem from="1573184185174" duration="167000" />
+      <workItem from="1573184374657" duration="2131000" />
+      <workItem from="1573187190447" duration="231000" />
+      <workItem from="1573187598840" duration="467000" />
+      <workItem from="1573222959371" duration="242000" />
+      <workItem from="1573223422159" duration="326000" />
+      <workItem from="1573224265177" duration="153000" />
+      <workItem from="1573224742733" duration="542000" />
+      <workItem from="1573226131694" duration="428000" />
+      <workItem from="1573576236895" duration="672000" />
+      <workItem from="1573689814223" duration="4031000" />
+      <workItem from="1573694062451" duration="9838000" />
+      <workItem from="1573743367833" duration="6343000" />
+      <workItem from="1573832374668" duration="5469000" />
+      <workItem from="1574181028089" duration="61000" />
+      <workItem from="1574181118086" duration="33000" />
+      <workItem from="1574183581276" duration="964000" />
+      <workItem from="1574444349087" duration="9389000" />
+      <workItem from="1574458026804" duration="2542000" />
+      <workItem from="1574546874706" duration="8705000" />
+      <workItem from="1574695483089" duration="3180000" />
+      <workItem from="1574704754557" duration="6807000" />
+      <workItem from="1574813206748" duration="3446000" />
+      <workItem from="1575298739427" duration="2752000" />
+      <workItem from="1575342962712" duration="1591000" />
+      <workItem from="1575344958139" duration="4329000" />
+      <workItem from="1575514905786" duration="126000" />
+      <workItem from="1575515079835" duration="5409000" />
+      <workItem from="1575595567175" duration="7000" />
+      <workItem from="1575657121349" duration="5000" />
+      <workItem from="1578089919563" duration="2129000" />
+      <workItem from="1578093632129" duration="597000" />
+      <workItem from="1578094249404" duration="669000" />
+      <workItem from="1578096248156" duration="36000" />
+      <workItem from="1578154964013" duration="218000" />
+      <workItem from="1578156187228" duration="125000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/CocoaLumberjack" />
+    </ignored-roots>
+    <MESSAGE value="Intial otmf web site import" />
+    <MESSAGE value="Intial So sounds app import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intial So sounds app import" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="609" y="172" width="795" height="450" key="#xdebugger.evaluate" timestamp="1575589611814">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="609" y="172" width="795" height="450" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1575589611814" />
+    <state width="1398" height="272" key="GridCell.Tab.0.bottom" timestamp="1575593061067">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1575593061067" />
+    <state width="1398" height="272" key="GridCell.Tab.0.center" timestamp="1575593061066">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1575593061066" />
+    <state width="1398" height="272" key="GridCell.Tab.0.left" timestamp="1575593061066">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1575593061066" />
+    <state width="1398" height="272" key="GridCell.Tab.0.right" timestamp="1575593061066">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1575593061066" />
+    <state width="1398" height="272" key="GridCell.Tab.1.bottom" timestamp="1575593061068">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1575593061068" />
+    <state width="1398" height="272" key="GridCell.Tab.1.center" timestamp="1575593061067">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1575593061067" />
+    <state width="1398" height="272" key="GridCell.Tab.1.left" timestamp="1575593061067">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1575593061067" />
+    <state width="1398" height="272" key="GridCell.Tab.1.right" timestamp="1575593061067">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="272" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1575593061067" />
+    <state width="527" height="439" key="XDebugger.FullValuePopup" timestamp="1575589456525">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="527" height="439" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1575589456525" />
+    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578094354313">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1578094354313" />
+    <state x="399" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1578156188780">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="399" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1578156188780" />
+    <state x="534" y="314" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575589721730">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="534" y="314" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1575589721730" />
+    <state x="386" y="223" width="667" height="476" key="find.popup" timestamp="1575591824885">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="386" y="223" width="667" height="476" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1575591824885" />
+    <state x="385" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1575656424752">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1575656424752" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SoSound/controller/tour/TourViewController.swift</url>
+          <line>5</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SoSound/controller/AdminViewController.swift</url>
+          <line>269</line>
+          <option name="timeStamp" value="252" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SoSound/dao/SongDao.swift</url>
+          <line>105</line>
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SoSound/controller/LogoViewController.swift</url>
+          <line>75</line>
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SoSound/controller/tour/SettingsViewController.swift</url>
+          <line>106</line>
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SoSound/controller/tour/SettingsViewController.swift</url>
+          <line>66</line>
+          <option name="timeStamp" value="271" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SoSound/controller/EditMusicViewController.swift</url>
+          <line>181</line>
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="CidrCoverage/SoSound/SoSound.json" NAME="SoSound Coverage Results" MODIFIED="1568391263753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="llvm-cov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

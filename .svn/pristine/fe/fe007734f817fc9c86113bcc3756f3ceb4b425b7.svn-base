@@ -1,0 +1,160 @@
+//
+// Created by Dave Brown on 8/19/18.
+// Copyright (c) 2018 Reverie. All rights reserved.
+//
+
+import Foundation
+
+class MusicManager: NSObject, URLSessionDownloadDelegate {
+
+    var downloadTask: URLSessionDownloadTask!
+    var backgroundSession: URLSession!
+    var downloadStep: Int = 0
+    var downloadDelegate: MusicDownloadDelegate?
+
+    override init() {
+
+    }
+
+    /*
+    Verify all the music files.
+    */
+    func verifyDownloadFiles() -> Bool {
+
+        var filesExistCount: Int = 0
+        for file in musicDownloadList {
+
+            if let audioUrl = URL(string: file) {
+                let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let destinationUrl = documentsDirectoryURL.appendingPathComponent(audioUrl.lastPathComponent)
+//            print(destinationUrl)
+                if FileManager.default.fileExists(atPath: destinationUrl.path) {
+                    filesExistCount += 1
+                }
+            }
+        }
+        return filesExistCount == musicDownloadList.count
+    }
+
+
+    func downloadMusic(downloadDelegate: MusicDownloadDelegate) {
+
+        self.downloadDelegate = downloadDelegate
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250), execute: {
+            // Put your code which should be executed with a delay here
+            let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: UUID().uuidString)
+            self.backgroundSession = URLSession(configuration: backgroundSessionConfiguration, delegate: self, delegateQueue: OperationQueue.main)
+
+            if self.downloadStep >= musicDownloadList.count {
+                // verify the music after the download
+                downloadDelegate.downloadComplete(error: !self.verifyDownloadFiles())
+                self.downloadStep = 0
+            } else {
+                if let audioUrl = URL(string: musicDownloadList[self.downloadStep]) {
+                    var downloadFile = true
+                    let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                    // lets create your destination file url
+                    let destinationUrl = documentsDirectoryURL.appendingPathComponent(audioUrl.lastPathComponent)
+                    if FileManager.default.fileExists(atPath: destinationUrl.path) {
+                        let semaphore = DispatchSemaphore(value: 0)
+                        do {
+                            let attr = try FileManager.default.attributesOfItem(atPath: destinationUrl.path)
+                            var fileSize = attr[FileAttributeKey.size] as! UInt64
+                            self.getDownloadSize(url: audioUrl, completion: { (size, error) in
+                                if error == nil {
+                                    if fileSize == size {
+                                        if let dd = self.downloadDelegate {
+                                            downloadFile = false
+                                            dd.downloadProgress(progressText: "Downloading \(URL(string: musicDownloadList[self.downloadStep])!.lastPathComponent)...\nFile Exists, skipping file")
+                                        }
+                                    }
+                                }
+                                semaphore.signal()
+                            })
+                            _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+                            var go = 0
+                        } catch {
+                        }
+                    }
+
+                    if (downloadFile) {
+                        self.downloadTask = self.backgroundSession.downloadTask(with: audioUrl)
+                        self.downloadTask.resume()
+                    } else {
+                        if let dd = self.downloadDelegate {
+                            self.downloadStep += 1
+                            self.downloadMusic(downloadDelegate: dd)
+                        }
+                    }
+                }
+            }
+        })
+    }
+
+
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        if let audioUrl = URL(string: musicDownloadList[self.downloadStep]) {
+            // then lets create your document folder url
+            let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+            // lets create your destination file url
+            let destinationUrl = documentsDirectoryURL.appendingPathComponent(audioUrl.lastPathComponent)
+//            print(destinationUrl)
+            if FileManager.default.fileExists(atPath: destinationUrl.path) {
+                log("The file " + audioUrl.lastPathComponent + " already exists at path")
+                do {
+                    try FileManager.default.removeItem(atPath: destinationUrl.path)
+                    log(audioUrl.lastPathComponent + " deleted.")
+                } catch {
+                    log("Unable to delete file " + audioUrl.lastPathComponent)
+                }
+            }
+
+            do {
+                // after downloading your file you need to move it to your destination url
+                try FileManager.default.moveItem(at: location, to: destinationUrl)
+                log("File " + audioUrl.lastPathComponent + " moved to documents folder")
+                // increment the step to download the next file
+                self.downloadStep += 1
+
+                if let dd = self.downloadDelegate {
+                    self.downloadMusic(downloadDelegate: dd)
+                }
+            } catch let error as NSError {
+                log("Error moving " + audioUrl.lastPathComponent + " to documents folder")
+            }
+        }
+    }
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if error != nil, let errorMsg = error?.localizedDescription {
+            log("Error downloading file: " + errorMsg)
+        }
+    }
+
+    func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
+        if error != nil, let errorMsg = error?.localizedDescription {
+            log("Error downloading file: " + errorMsg)
+        }
+    }
+
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        if let dd = downloadDelegate {
+            dd.downloadProgress(progressText: "Downloading \(URL(string: musicDownloadList[self.downloadStep])!.lastPathComponent)...\n\(self.downloadStep + 1) of \(musicDownloadList.count)\n\(totalBytesWritten)/\(totalBytesExpectedToWrite)\nPercentage: \(Int((Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)) * 100))%")
+        }
+    }
+
+    func getDownloadSize(url: URL, completion: @escaping (Int64, Error?) -> Void) {
+        let timeoutInterval = 5.0
+        var request = URLRequest(url: url,
+                cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                timeoutInterval: timeoutInterval)
+        request.httpMethod = "HEAD"
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            let contentLength = response?.expectedContentLength ?? NSURLSessionTransferSizeUnknown
+            completion(contentLength, error)
+        }.resume()
+    }
+
+}

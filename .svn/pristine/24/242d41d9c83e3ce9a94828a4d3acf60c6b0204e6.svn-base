@@ -1,0 +1,142 @@
+//
+//  ExperienceViewController.swift
+//  SoSound
+//
+//  Created by David on 7/10/17.
+//  Copyright © 2017 Reverie. All rights reserved.
+//
+
+import UIKit
+
+class ExperienceViewController: UIViewController {
+
+    var image:UIImage = UIImage(named: "Pause")!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var volumeLabel: UILabel!
+    @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var playButton: UIButton!
+    var idleView:UIView!
+    var idleTimer:Timer!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(ExperienceViewController.removeSelf), name: NSNotification.Name(rawValue: kTimer), object: nil)
+
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+
+        self.idleView = UIView(frame: self.view.frame)
+        self.idleView.backgroundColor = UIColor.black
+        self.idleView.alpha = 0.7
+        self.imageView.image = self.image
+        let idleTap = UITapGestureRecognizer(target: self, action: #selector(ExperienceViewController.removeIdleView))
+        self.idleView.addGestureRecognizer(idleTap)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(ExperienceViewController.backTapped(sender:)))
+        self.idleTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(ExperienceViewController.addIdleView), userInfo: nil, repeats: false)
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.imageView.image = self.image
+        self.volumeLabel.alpha = 0
+        self.volumeSlider.alpha = 0
+        self.playButton.alpha = 0
+        self.volumeSlider.setValue(1.0, animated: false)
+        self.idleTimer.invalidate()
+        self.idleTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(ExperienceViewController.addIdleView), userInfo: nil, repeats: false)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        UIView.animate(withDuration: 0.5) {
+            self.volumeLabel.alpha = 100
+            self.volumeSlider.alpha = 100
+            self.playButton.alpha = 100
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+
+    func backTapped(sender: UIBarButtonItem) {
+//        let cs = ComfortSetting(name: "", headPositionValue: 80, footPositionValue: 50, lumbarPositionValue: 0, headMassageValue: 0, footMassageValue: 0, massageTimer: 0, massageMode: .None, emailAddress: "", isRoutineOnly: false)
+//        btleInterface.comfortSettingExecute(cs) { (time) in
+//            print("movement done")
+//        }
+        UIView.animate(withDuration: 0.5, animations: {
+            self.volumeLabel.alpha = 0
+            self.volumeSlider.alpha = 0
+            self.playButton.alpha = 0
+        }) { (done) in
+            self.navigationController?.popViewController(animated: false)
+
+        }
+    }
+
+    @IBAction func exitButtonPressed(_ sender: Any) {
+        self.backTapped(sender: self.navigationItem.leftBarButtonItem!)
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func volumeSliderChanged(_ sender: Any) {
+        self.volumeLabel.text = "\(Int(self.volumeSlider.value * 100))"
+        soundManager.changeVolume(vol: self.volumeSlider.value)
+        self.idleTimer.invalidate()
+        self.idleTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(ExperienceViewController.addIdleView), userInfo: nil, repeats: false)
+    }
+
+    @IBAction func playButtonTapped(_ sender: Any) {
+        self.idleTimer.invalidate()
+        self.idleTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(ExperienceViewController.addIdleView), userInfo: nil, repeats: false)
+        if soundManager.player.isPlaying {
+            soundManager.pause()
+            self.playButton.setImage(UIImage(named: "Play"), for: .normal)
+        } else {
+            soundManager.resume()
+            self.playButton.setImage(UIImage(named: "Pause"), for: .normal)
+        }
+    }
+
+    func addIdleView() {
+        self.idleView.alpha = 0
+        self.view.addSubview(self.idleView)
+        UIView.animate(withDuration: 10.0) {
+            self.idleView.alpha = 0.7
+        }
+    }
+    func removeIdleView() {
+
+        UIView.animate(withDuration: 3.0, animations: {
+            self.idleView.alpha = 0
+        }) { (done) in
+            self.idleView.removeFromSuperview()
+            self.idleTimer.invalidate()
+            self.idleTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(ExperienceViewController.addIdleView), userInfo: nil, repeats: false)
+        }
+    }
+
+    func removeSelf() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

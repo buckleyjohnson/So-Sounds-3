@@ -1,0 +1,94 @@
+//
+//  SoundManager.swift
+//  SoSound
+//
+//  Created by David on 7/14/17.
+//  Copyright © 2017 Reverie. All rights reserved.
+//
+
+import Foundation
+import AVFoundation
+
+class SoundManager: NSObject {
+    
+    var player = AVAudioPlayer()
+    var nextPlayer = AVAudioPlayer()
+    var sosoundVol:Float = 100
+    
+    override init() {
+        super.init()
+    }
+
+    func play(url:URL) -> Bool{
+        var result = true
+        log("playing \(url)")
+        
+        do {
+            self.player = try AVAudioPlayer(contentsOf: url)
+            player.prepareToPlay()
+            player.volume = 0
+            if url == songSoSoundURL {
+                player.setVolume(self.sosoundVol, fadeDuration: 5)
+                player.numberOfLoops = -1
+            } else {
+                player.setVolume(1, fadeDuration: 5)
+            }
+            player.play()
+        } catch let error as NSError {
+            log("Error playing song - " + url.lastPathComponent)
+            result = false
+        } catch {
+            log("AVAudioPlayer init failed")
+            result = false
+        }
+        return result
+    }
+    
+    func transitionSong(url:URL) -> Bool {
+        var result = true
+        log("playing \(url)")
+        
+        do {
+            self.nextPlayer = try AVAudioPlayer(contentsOf: url)
+            nextPlayer.prepareToPlay()
+            nextPlayer.volume = 0
+            if url == songSoSoundURL {
+                nextPlayer.setVolume(self.sosoundVol, fadeDuration: 10)
+                nextPlayer.numberOfLoops = -1
+            } else {
+                nextPlayer.setVolume(0.25 , fadeDuration: 10)
+            }
+            player.setVolume(0, fadeDuration: 10)
+            nextPlayer.play()
+            Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(SoundManager.updatePlayer), userInfo: nil, repeats: false)
+        } catch let error as NSError {
+            //self.player = nil
+            log("Error playing song - " + url.lastPathComponent)
+            result = false
+        } catch {
+            log("AVAudioPlayer init failed")
+            result = false
+        }
+        return false
+    }
+
+    func changeVolume(vol:Float) {
+        if player.url == songSoSoundURL {
+            self.sosoundVol = vol
+        }
+        self.player.volume = vol
+    }
+    
+    func updatePlayer() {
+        self.player = self.nextPlayer
+    }
+    
+    func pause() {
+        self.player.pause()
+    }
+    
+    func resume() {
+        self.player.play()
+    }
+    
+}
